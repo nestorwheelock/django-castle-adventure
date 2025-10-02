@@ -173,3 +173,80 @@ def load_game(request):
     if game_state:
         return redirect('castle_adventure:scene', scene_id=game_state.current_scene.scene_id)
     return redirect('castle_adventure:start')
+
+
+def unlock_ending(request, ending):
+    """Record ending unlock for user/session."""
+    from .models import EndingUnlock
+
+    if request.user.is_authenticated:
+        EndingUnlock.objects.get_or_create(
+            user=request.user,
+            ending=ending
+        )
+    else:
+        if not request.session.session_key:
+            request.session.create()
+        EndingUnlock.objects.get_or_create(
+            session_key=request.session.session_key,
+            ending=ending
+        )
+
+
+def get_unlocked_endings(request):
+    """Get list of endings this user/session has unlocked."""
+    from .models import EndingUnlock
+
+    if request.user.is_authenticated:
+        return EndingUnlock.objects.filter(user=request.user).values_list('ending_id', flat=True)
+    else:
+        if not request.session.session_key:
+            return []
+        return EndingUnlock.objects.filter(session_key=request.session.session_key).values_list('ending_id', flat=True)
+
+
+def display_ending(request, scene_id):
+    """Display ending with achievement unlock."""
+    from .models import Ending
+    from .ending_logic import determine_ending
+
+    game_state = get_game_state(request)
+    scene = get_object_or_404(Scene, scene_id=scene_id, is_ending=True)
+
+    ending_id = determine_ending(game_state)
+    ending = Ending.objects.get(ending_id=ending_id)
+
+    game_state.is_complete = True
+    game_state.ending_reached = ending_id
+    game_state.save()
+
+    unlock_ending(request, ending)
+
+    all_endings = Ending.objects.all()
+    unlocked_endings = get_unlocked_endings(request)
+
+    context = {
+        'ending': ending,
+        'game_state': game_state,
+        'all_endings': all_endings,
+        'unlocked_endings': unlocked_endings,
+    }
+    return render(request, 'castle_adventure/ending.html', context)
+
+
+def endings_collection(request):
+    """Display all endings with locked/unlocked status."""
+    from .models import Ending
+
+    all_endings = Ending.objects.all().order_by('ending_id')
+    unlocked = list(get_unlocked_endings(request))
+
+    for ending in all_endings:
+        ending.is_unlocked = ending.id in unlocked
+
+    context = {
+        'endings': all_endings,
+        'total_endings': all_endings.count(),
+        'unlocked_count': len(unlocked),
+    }
+    return render(request, 'castle_adventure/endings_collection.html', context)

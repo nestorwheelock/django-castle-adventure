@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ ending.title }}</title>
+</head>
+<body>
+    <h1>{{ ending.icon }} {{ ending.title }}</h1>
+    <p>{{ ending.description }}</p>
+
+    <h2>Achievement Unlocked!</h2>
+    <p>{{ ending.achievement_text }}</p>
+
+    <h3>Your Stats</h3>
+    <ul>
+        <li>Choices Made: {{ game_state.choices_made }}</li>
+        <li>Items Collected: {{ game_state.items_collected }}</li>
+        <li>Deaths: {{ game_state.deaths }}</li>
+    </ul>
+
+    <h3>Endings Unlocked: {{ unlocked_endings|length }}/{{ all_endings|length }}</h3>
+    <a href="{% url 'castle_adventure:endings_collection' %}">View All Endings</a>
+    <br>
+    <a href="{% url 'castle_adventure:new_game' %}">Play Again</a>
+</body>
+</html>

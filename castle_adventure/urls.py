@@ -16,4 +16,6 @@ urlpatterns = [
     path('inventory/', views.view_inventory, name='inventory'),
     path('save/', views.save_game, name='save'),
     path('load/', views.load_game, name='load'),
+    path('ending/<str:scene_id>/', views.display_ending, name='display_ending'),
+    path('endings/', views.endings_collection, name='endings_collection'),
 ]

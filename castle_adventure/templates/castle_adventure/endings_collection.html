@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Endings Collection</title>
+</head>
+<body>
+    <h1>Endings Collection</h1>
+    <p>Unlocked: {{ unlocked_count }} / {{ total_endings }}</p>
+
+    <ul>
+    {% for ending in endings %}
+        <li>
+            {% if ending.is_unlocked %}
+                {{ ending.icon }} {{ ending.title }} - {{ ending.ending_type }}
+                <br><small>{{ ending.achievement_text }}</small>
+            {% else %}
+                {% if ending.is_secret %}
+                    ❓ Secret Ending - Locked
+                {% else %}
+                    🔒 Locked
+                {% endif %}
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'castle_adventure:landing' %}">Back to Game</a>
+</body>
+</html>
