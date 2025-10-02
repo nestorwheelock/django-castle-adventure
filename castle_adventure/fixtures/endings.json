@@ -1,0 +1,80 @@
+[
+  {
+    "model": "castle_adventure.ending",
+    "pk": 1,
+    "fields": {
+      "ending_id": "E1",
+      "title": "Heroic Rescue",
+      "description": "The classic hero's journey - you rescued the princess through courage and determination",
+      "ending_type": "victory",
+      "icon": "⭐",
+      "achievement_text": "The Classic Hero - Rescued Princess Elara",
+      "is_secret": false,
+      "requirements": {}
+    }
+  },
+  {
+    "model": "castle_adventure.ending",
+    "pk": 2,
+    "fields": {
+      "ending_id": "E2",
+      "title": "Bitter Betrayal",
+      "description": "Your chaotic methods led to distrust and failure",
+      "ending_type": "betrayal",
+      "icon": "💔",
+      "achievement_text": "The Villain's Path - Betrayed by Your Own Actions",
+      "is_secret": false,
+      "requirements": {"npc_relations": -1}
+    }
+  },
+  {
+    "model": "castle_adventure.ending",
+    "pk": 3,
+    "fields": {
+      "ending_id": "E3",
+      "title": "Everyone Escapes Together",
+      "description": "By befriending everyone, you achieved the best possible outcome",
+      "ending_type": "victory",
+      "icon": "🌟",
+      "achievement_text": "The Diplomat - United Everyone for Freedom",
+      "is_secret": false,
+      "requirements": {
+        "dragon_befriended": true,
+        "troll_befriended": true,
+        "wizard_helped": true
+      }
+    }
+  },
+  {
+    "model": "castle_adventure.ending",
+    "pk": 4,
+    "fields": {
+      "ending_id": "E4",
+      "title": "Castle Collapse",
+      "description": "Too much chaos caused the ancient castle to crumble",
+      "ending_type": "defeat",
+      "icon": "💥",
+      "achievement_text": "The Destroyer - Brought Down an Ancient Castle",
+      "is_secret": false,
+      "requirements": {"chaos_level": 11}
+    }
+  },
+  {
+    "model": "castle_adventure.ending",
+    "pk": 5,
+    "fields": {
+      "ending_id": "E5",
+      "title": "The True Ruler",
+      "description": "By mastering every challenge, you became the castle's rightful ruler",
+      "ending_type": "secret",
+      "icon": "👑",
+      "achievement_text": "The True King - Claimed the Ancient Throne",
+      "is_secret": true,
+      "requirements": {
+        "all_items": true,
+        "all_npcs_befriended": true,
+        "sat_on_throne": true
+      }
+    }
+  }
+]

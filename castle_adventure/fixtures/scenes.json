@@ -1,0 +1,392 @@
+[
+  {
+    "model": "castle_adventure.scene",
+    "pk": 1,
+    "fields": {
+      "scene_id": "01",
+      "title": "Outside Castle Walls",
+      "description": "A dark, stormy night. Rain lashes against your face as Castle Shadowmere looms ominously before you, its twisted towers silhouetted against flashes of lightning. Somewhere inside, Princess Elara awaits rescue... allegedly. The front gate is heavily guarded by armed soldiers who look like they haven't smiled since the Dark Ages. To your left, an overgrown garden wall offers a more discreet entry point, though the vines look suspiciously carnivorous.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 2,
+    "fields": {
+      "scene_id": "02",
+      "title": "Climbing the Garden Wall",
+      "description": "You begin scaling the moss-covered stone wall, grateful for all those rock-climbing lessons you took instead of learning useful skills like negotiation. The vines are surprisingly sturdy, though one whispers 'we'll get you later' as you grab it. Thunder rumbles overhead, masking the sound of your ascent. You pull yourself over the top and drop into the courtyard below.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 3,
+    "fields": {
+      "scene_id": "03",
+      "title": "Courtyard of Hounds",
+      "description": "You land in a cobblestone courtyard and immediately freeze. Three enormous hellhounds the size of small horses turn their glowing red eyes toward you. Their growls sound like a dying engine. The beasts begin advancing slowly, teeth bared. To your right, a drawbridge leads deeper into the castle. To your left, you spot what might be a storage shed. The hounds are between you and both options.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 4,
+    "fields": {
+      "scene_id": "04",
+      "title": "Sprint Across the Courtyard!",
+      "description": "You bolt toward the drawbridge at full speed, arms pumping like your life depends on it (it does). The hounds give chase immediately, their paws thundering on the cobblestones. You can feel their hot breath on your heels as you leap onto the drawbridge planks. You spot a rusted chain mechanism on the wall - if you can activate it, the grate will drop behind you and seal the way.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 5,
+    "fields": {
+      "scene_id": "05",
+      "title": "Drawbridge Crossing",
+      "description": "You yank the chain mechanism with all your strength. Ancient gears grind and screech as a heavy iron portcullis begins to descend. The hounds are only meters away now, their snarls echoing off the stone walls. You dive forward through the narrowing gap just as the gate slams shut with a resounding CLANG. The disappointed howls of the hounds fade as you catch your breath in the dark entrance hall beyond.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 6,
+    "fields": {
+      "scene_id": "06",
+      "title": "Hide in the Storage Shed",
+      "description": "You dive into the storage shed and press yourself against the wall behind some moldy crates. The hounds sniff around outside, their growls vibrating the wooden door. After what feels like an eternity, their interest wanes and they pad away. You wait until their sounds fade completely, then slip out and make for the now-unguarded drawbridge entrance. The portcullis ahead is raised, inviting you deeper into the castle.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 7,
+    "fields": {
+      "scene_id": "07",
+      "title": "Castle Entrance Hall",
+      "description": "You stand in a cavernous entrance hall lit by sputtering torches. Dusty portraits of stern-looking nobles line the walls, their painted eyes seeming to follow your movement. Two massive oak doors ahead lead to what must be the throne room. The air smells of old stone and disappointment. Your footsteps echo on the marble floor as you approach the throne room doors, which creak open at your touch.",
+      "scene_type": "hub",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 8,
+    "fields": {
+      "scene_id": "08",
+      "title": "The Throne Room",
+      "description": "An enormous throne room stretches before you, dominated by a massive stone throne covered in mysterious runes. On a side table, a golden goblet gleams in the torchlight - might be valuable, might be cursed, probably both. Behind the throne, you notice something odd: a section of the wall looks slightly different, as if hiding a secret passage. More importantly, on the throne's armrest is a scrap of parchment with faded writing that might be a clue.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 9,
+    "fields": {
+      "scene_id": "09",
+      "title": "Grand Hallway Hub",
+      "description": "This central hallway is the castle's main artery, with corridors branching off in all directions. Faded tapestries depicting ancient battles hang between doorways. A wooden sign helpfully indicates: 'Library (North) - Dungeon (Down) - Dragon's Den (East) - Wizard's Tower (West).' The sign's cheerful arrows seem inappropriately optimistic given the circumstances. You can hear distant sounds from each direction: rustling pages, rattling chains, rumbling snores, and... is that pizza delivery music?",
+      "scene_type": "hub",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 10,
+    "fields": {
+      "scene_id": "10",
+      "title": "The Dusty Library",
+      "description": "Floor-to-ceiling bookshelves stuffed with ancient tomes surround you. Dust particles dance in beams of moonlight streaming through narrow windows. On a reading desk, you find a bottle of ink labeled 'Invisible Ink - Now 30% More Invisible!' Next to it is a faded map showing the castle's layout. The map has an interesting notation: 'Hidden message in throne room - needs magic spectacles to read.' How very fantasy-adventure-game of this place.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 11,
+    "fields": {
+      "scene_id": "11",
+      "title": "Revealed Secret Message",
+      "description": "With the magic spectacles perched on your nose, you return to examine the throne room wall more carefully. Suddenly, glowing text appears that was completely invisible before: 'The Tower Key rests behind the throne's foundation. Lift the skull rune.' You push the skull-shaped rune on the throne's base, and a hidden compartment clicks open, revealing an ornate brass key. Score one for magical optometry!",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 12,
+    "fields": {
+      "scene_id": "12",
+      "title": "Descending to the Dungeon",
+      "description": "Stone steps spiral down into darkness. The walls are slick with moisture and decorated with motivational posters like 'Hang In There!' (featuring a skeleton in chains) and 'You're Doing Great!' (pictured: rats). The air grows colder with each step. At the bottom, a heavy iron door stands ajar, flickering torchlight spilling from the crack. You hear a deep, gravelly voice muttering to itself about philosophical paradoxes.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 13,
+    "fields": {
+      "scene_id": "13",
+      "title": "The Troll's Lair",
+      "description": "A massive troll sits on a pile of bones, scratching his warty head with one clawed finger. He's surprisingly well-groomed for a dungeon dweller, with his tusks polished to a shine. 'Ah, visitor!' he rumbles cheerfully. 'Been ages since anyone came by. Tell you what - answer my riddle correctly, and I'll give you these fancy spectacles I found. Get it wrong... well, I get lonely down here.' He grins, revealing more teeth than seems strictly necessary.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 14,
+    "fields": {
+      "scene_id": "14",
+      "title": "Dragon's Den",
+      "description": "You enter an enormous cavern carved into the castle's foundation. Piles of gold coins and treasure glitter in the dim light. Curled atop the largest mound is a massive red dragon, currently snoring so loudly that stalactites vibrate. Wisps of smoke curl from its nostrils with each breath. A brass plate nearby reads 'Pyraxis the Irritable - DO NOT DISTURB.' Next to the dragon's head, you spot a small brass jar labeled 'Dragon's Flame - One Use Only - Keep Away From Children.'",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 15,
+    "fields": {
+      "scene_id": "15",
+      "title": "Sneaking Past the Dragon",
+      "description": "You hold your breath and inch forward with excruciating slowness. The dragon's breathing remains steady - in, out, rumble, smoke. You're so close now you can feel the heat radiating from its scales. Your hand closes around the brass jar. The dragon snorts in its sleep, and you freeze, heart pounding. After a terrifying moment, its breathing resumes its rhythmic pattern. You carefully back away with your prize, trying not to think about what would happen if it woke up.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 16,
+    "fields": {
+      "scene_id": "16",
+      "title": "Wizard's Quarters",
+      "description": "You knock on the ornate door and it swings open to reveal a cluttered workshop. A wizard in star-covered robes looks up from his bubbling cauldron, blinking in surprise. 'Oh! Are you the pizza delivery? No? Shame. Well, since you're here... I suppose you want the Royal Seal to get into the tower, yes? Everyone does. Tell you what - fetch me that golden goblet from the throne room, and it's yours. I need it for... magical reasons.' He waves his staff mysteriously, accidentally turning a nearby book into a chicken.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 17,
+    "fields": {
+      "scene_id": "17",
+      "title": "Tower Base",
+      "description": "You arrive at the base of the castle's highest tower, where a spiral staircase disappears into darkness above. The wizard's Royal Seal glows warmly in your hand, having unlocked the tower entrance. Steep stone steps wind upward, lit by occasional torch brackets. The air is noticeably colder here. You can feel that something important awaits at the top. Time to climb.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 18,
+    "fields": {
+      "scene_id": "18",
+      "title": "Ice-Blocked Staircase",
+      "description": "Halfway up the tower, your path is completely blocked by a massive wall of ice. The frozen barrier stretches from floor to ceiling, its surface covered in intricate frost patterns. Your breath mists in the frigid air. Through the translucent ice, you can make out the continuation of the staircase beyond. There's no way through without melting this obstruction. The dragon's flame jar suddenly feels very relevant.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 19,
+    "fields": {
+      "scene_id": "19",
+      "title": "Melting the Ice",
+      "description": "You uncork the jar of dragon's flame and pour it onto the ice wall. The magical fire spreads across the frozen surface with a satisfying WHOOSH, melting through the ice in seconds. Steam fills the stairwell as the barrier transforms into puddles. Once the mist clears, you see the path ahead is now open. Water drips from the walls as you continue your ascent toward the tower's peak.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 20,
+    "fields": {
+      "scene_id": "20",
+      "title": "Tower Landing",
+      "description": "You emerge onto a circular landing near the tower's peak. A single ornate door stands before you, its surface carved with roses and thorns. A brass nameplate reads 'Princess Elara - Please Knock Before Entering.' You can hear soft music playing inside. This is it - the moment you've been questing toward. You take a deep breath and push open the door.",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 21,
+    "fields": {
+      "scene_id": "21",
+      "title": "Princess Elara's Chamber",
+      "description": "The tower chamber is surprisingly pleasant, with tapestries, comfortable furniture, and a well-stocked bookshelf. Princess Elara looks up from her book, raising an eyebrow. 'Another rescuer? How delightful. Let me guess - you fought dragons, solved riddles, and climbed through danger to reach me?' She sets down her book. 'Before we proceed, I should mention I'm quite capable of leaving whenever I want. The question is: what kind of person are you, really? Your actions during this adventure will determine how this story ends.'",
+      "scene_type": "story",
+      "is_ending": false,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 22,
+    "fields": {
+      "scene_id": "E1",
+      "title": "Heroic Rescue",
+      "description": "Princess Elara carefully evaluates you - your gear, your demeanor, the mud on your boots from honest adventure. Finally, she smiles. 'You know what? You'll do. You actually came here to help, didn't you? Not for glory or gold, but because someone needed rescuing. That's refreshingly old-fashioned.' She gathers a few belongings. 'Let's get out of this dreary castle. My kingdom is going to need heroes like you.' Together, you descend the tower and slip out into the sunrise, ready for whatever comes next. THE END.",
+      "scene_type": "ending",
+      "is_ending": true,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 23,
+    "fields": {
+      "scene_id": "E2",
+      "title": "Bitter Betrayal",
+      "description": "Princess Elara's expression hardens as she takes in your choices. 'I've been watching your progress through the castle. The trail of chaos, the disregard for those you encountered...' She stands, revealing a hidden sword. 'You're not a rescuer - you're a disaster waiting to happen. Guards!' Armed soldiers pour into the room. As they escort you to the dungeon, Elara watches with disappointment. 'I was here by choice, studying dark magic in peace. Now I'll have to clean up your mess.' Your adventure ends in a cell, contemplating poor life choices. THE END.",
+      "scene_type": "ending",
+      "is_ending": true,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 24,
+    "fields": {
+      "scene_id": "E3",
+      "title": "Everyone Escapes Together",
+      "description": "Princess Elara laughs when you explain how you helped everyone you met in the castle. 'You befriended the troll? Negotiated with the dragon? Even helped the wizard with his ridiculous goblet quest?' She's impressed. 'That's... actually remarkable. Wait here.' She opens a window and whistles. Moments later, the dragon lands on the tower balcony, the troll climbing off its back, followed by the wizard. 'If we're all leaving,' Elara announces, 'we're doing it together!' The unlikely group flies off into the sunset on dragonback, bound for new adventures. THE END.",
+      "scene_type": "ending",
+      "is_ending": true,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 25,
+    "fields": {
+      "scene_id": "E4",
+      "title": "Collapsing Castle",
+      "description": "Just as you reach Princess Elara, the entire castle begins to shake violently. 'What did you DO?!' she shouts over the rumbling. Your chaotic path through the castle - waking the dragon, angering the troll, breaking the wizard's equipment - has destabilized the ancient magical wards holding the structure together. Stone crumbles around you as you both run for the exit. You make it out just as Castle Shadowmere collapses into rubble with a thunderous crash. Standing in the ruins, Elara sighs. 'Well, at least we're both alive. Barely.' THE END.",
+      "scene_type": "ending",
+      "is_ending": true,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 26,
+    "fields": {
+      "scene_id": "E5",
+      "title": "The True Ruler",
+      "description": "Princess Elara studies you with new respect. 'You collected every artifact, befriended every creature, and sat upon the ancient throne. The castle itself has chosen you.' She reveals a hidden truth: the castle was a test, designed centuries ago to find a worthy ruler. By completing it perfectly, you've proven yourself. The throne room transforms, revealing its true grandeur. Elara places a crown upon your head. 'Castle Shadowmere has a new master. Rule wisely.' The dragon, troll, and wizard pledge their service. Your real adventure is just beginning. THE END.",
+      "scene_type": "ending",
+      "is_ending": true,
+      "is_death": false,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 27,
+    "fields": {
+      "scene_id": "D1",
+      "title": "Death: Front Gate Approach",
+      "description": "You confidently stride toward the front gate. The guards immediately spot you. 'HALT!' one shouts. Before you can explain you're here to rescue someone, they've already called for backup. Turns out, trying to waltz through the front gate of an evil castle looks suspicious. Who knew? A dozen crossbow bolts later, you're definitely dead. On the bright side, you were very polite about it. GAME OVER - Try a different approach!",
+      "scene_type": "death",
+      "is_ending": true,
+      "is_death": true,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 28,
+    "fields": {
+      "scene_id": "D2",
+      "title": "Death: Fighting the Hounds",
+      "description": "You decide to stand your ground and fight the hellhounds. This is a terrible idea. You're armed with whatever you found in the garden (a stick), and they're armed with TEETH THE SIZE OF DAGGERS. The fight lasts approximately three seconds. The narrator would describe the gruesome details, but honestly, it's too embarrassing. Note to self: Don't fight demon dogs with gardening supplies. GAME OVER - Maybe try running next time?",
+      "scene_type": "death",
+      "is_ending": true,
+      "is_death": true,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 29,
+    "fields": {
+      "scene_id": "D3",
+      "title": "Death: Jumping Off the Drawbridge",
+      "description": "In a moment of panic, you decide jumping off the drawbridge into the moat below is a brilliant idea. Spoiler: it isn't. The moat is not filled with water. It's filled with what the castle staff euphemistically calls 'refuse disposal' but what you and I would call 'a pit of spikes and angry eels.' You land with a unfortunate splash-crunch. At least the eels seem happy about the unexpected snack. GAME OVER - Physics and common sense were not on your side!",
+      "scene_type": "death",
+      "is_ending": true,
+      "is_death": true,
+      "ascii_art": ""
+    }
+  },
+  {
+    "model": "castle_adventure.scene",
+    "pk": 30,
+    "fields": {
+      "scene_id": "D4",
+      "title": "Death: Waking the Dragon",
+      "description": "You decide it's a good idea to wake up the sleeping dragon. Perhaps you think you can negotiate? Perhaps you're feeling suicidal? The dragon opens one enormous eye, focuses on you, and without even getting up, incinerates you with a contemptuous puff of flame. 'Seriously?' are the last words you hear the dragon mutter before going back to sleep. There's a lesson here about not disturbing sleeping apex predators. GAME OVER - The dragon didn't even consider you worth the effort of moving!",
+      "scene_type": "death",
+      "is_ending": true,
+      "is_death": true,
+      "ascii_art": ""
+    }
+  }
+]

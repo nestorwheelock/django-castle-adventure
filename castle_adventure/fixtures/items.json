@@ -1,0 +1,114 @@
+[
+  {
+    "model": "castle_adventure.item",
+    "pk": 1,
+    "fields": {
+      "item_id": "ITEM_001",
+      "name": "Magic Spectacles",
+      "description": "Dusty spectacles that reveal invisible writing and hidden truths",
+      "found_in_scene": 13,
+      "is_critical": true,
+      "is_consumable": false,
+      "is_trap": false,
+      "icon": "👓"
+    }
+  },
+  {
+    "model": "castle_adventure.item",
+    "pk": 2,
+    "fields": {
+      "item_id": "ITEM_002",
+      "name": "Invisible Ink Bottle",
+      "description": "A bottle of invisible ink from the library",
+      "found_in_scene": 10,
+      "is_critical": false,
+      "is_consumable": true,
+      "is_trap": false,
+      "icon": "🧪"
+    }
+  },
+  {
+    "model": "castle_adventure.item",
+    "pk": 3,
+    "fields": {
+      "item_id": "ITEM_003",
+      "name": "Golden Goblet",
+      "description": "An ornate golden goblet from the throne room",
+      "found_in_scene": 8,
+      "is_critical": true,
+      "is_consumable": false,
+      "is_trap": false,
+      "icon": "🏆"
+    }
+  },
+  {
+    "model": "castle_adventure.item",
+    "pk": 4,
+    "fields": {
+      "item_id": "ITEM_004",
+      "name": "Dragon's Flame",
+      "description": "A brass jar containing magical dragon fire",
+      "found_in_scene": 14,
+      "is_critical": true,
+      "is_consumable": true,
+      "is_trap": false,
+      "icon": "🔥"
+    }
+  },
+  {
+    "model": "castle_adventure.item",
+    "pk": 5,
+    "fields": {
+      "item_id": "ITEM_005",
+      "name": "Tower Key",
+      "description": "An ornate brass key that unlocks the tower",
+      "found_in_scene": 11,
+      "is_critical": true,
+      "is_consumable": false,
+      "is_trap": false,
+      "icon": "🔑"
+    }
+  },
+  {
+    "model": "castle_adventure.item",
+    "pk": 6,
+    "fields": {
+      "item_id": "ITEM_006",
+      "name": "Royal Seal",
+      "description": "The wizard's magical royal seal",
+      "found_in_scene": 16,
+      "is_critical": true,
+      "is_consumable": false,
+      "is_trap": false,
+      "icon": "📜"
+    }
+  },
+  {
+    "model": "castle_adventure.item",
+    "pk": 7,
+    "fields": {
+      "item_id": "ITEM_007",
+      "name": "Ancient Map",
+      "description": "A map showing the castle's secret passages",
+      "found_in_scene": 10,
+      "is_critical": false,
+      "is_consumable": false,
+      "is_trap": false,
+      "icon": "🗺️"
+    }
+  },
+  {
+    "model": "castle_adventure.item",
+    "pk": 8,
+    "fields": {
+      "item_id": "ITEM_008",
+      "name": "Troll's Riddle Token",
+      "description": "A token proving you answered the troll's riddle",
+      "found_in_scene": 13,
+      "is_critical": false,
+      "is_consumable": false,
+      "is_trap": false,
+      "icon": "🎭"
+    }
+  }
+]
