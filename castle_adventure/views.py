@@ -47,6 +47,26 @@ def start_game(request):
     return redirect('castle_adventure:scene', scene_id=game_state.current_scene.scene_id)
 
 
+def new_game(request):
+    """Start new game, optionally overwriting existing save."""
+    existing_save = get_or_create_game_state(request)
+
+    if existing_save and not request.POST.get('confirm_overwrite'):
+        return JsonResponse({
+            'requires_confirmation': True,
+            'existing_save': {
+                'scene': existing_save.current_scene.title,
+                'items': existing_save.items_collected,
+                'last_played': existing_save.last_updated.isoformat(),
+            }
+        })
+
+    if existing_save:
+        existing_save.delete()
+
+    return redirect('castle_adventure:start')
+
+
 def display_scene(request, scene_id):
     """Display current scene with choices."""
     game_state = get_game_state(request)
@@ -130,9 +150,21 @@ def view_inventory(request):
 
 
 def save_game(request):
-    """Save current game state."""
-    game_state = get_game_state(request)
-    return render(request, 'castle_adventure/save_game.html', {'game_state': game_state})
+    """Manually save game state."""
+    try:
+        game_state = get_game_state(request)
+        game_state.save()
+
+        return JsonResponse({
+            'success': True,
+            'message': 'Game saved successfully',
+            'last_saved': game_state.last_updated.isoformat(),
+        })
+    except Http404:
+        return JsonResponse({
+            'success': False,
+            'message': 'No active game found'
+        }, status=404)
 
 
 def load_game(request):
