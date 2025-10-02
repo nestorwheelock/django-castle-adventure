@@ -111,19 +111,16 @@ class ManualSaveTestCase(TestCase):
         )
 
         response = self.client.post(reverse('castle_adventure:save'))
-        self.assertEqual(response.status_code, 200)
-
-        data = json.loads(response.content)
-        self.assertTrue(data['success'])
-        self.assertIn('message', data)
-        self.assertIn('last_saved', data)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('castle_adventure:scene', args=[self.scene1.scene_id]))
 
     def test_manual_save_no_active_game(self):
-        """Test manual save fails when no active game."""
+        """Test manual save redirects to landing when no active game."""
         self.client.login(username='testuser', password='testpass')
 
         response = self.client.post(reverse('castle_adventure:save'))
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('castle_adventure:landing'))
 
 
 class LoadGameTestCase(TestCase):
@@ -335,7 +332,7 @@ class SaveLoadIntegrationTestCase(TestCase):
         self.client.post(reverse('castle_adventure:choice', args=[self.choice1.id]))
 
         save_response = self.client.post(reverse('castle_adventure:save'))
-        self.assertEqual(save_response.status_code, 200)
+        self.assertEqual(save_response.status_code, 302)
 
         load_response = self.client.get(reverse('castle_adventure:load'))
         self.assertEqual(load_response.status_code, 302)

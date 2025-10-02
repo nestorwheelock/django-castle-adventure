@@ -5,10 +5,17 @@
 </head>
 <body>
     <h1>Inventory</h1>
+
+    {% if items %}
     <ul>
     {% for item in items %}
-        <li>{{ item.name }}</li>
+        <li>{{ item.icon }} <strong>{{ item.name }}</strong> - {{ item.description }}</li>
     {% endfor %}
     </ul>
+    {% else %}
+    <p>Your inventory is empty.</p>
+    {% endif %}
+
+    <p><a href="{% url 'castle_adventure:scene' game_state.current_scene.scene_id %}">[Back to game]</a></p>
 </body>
 </html>

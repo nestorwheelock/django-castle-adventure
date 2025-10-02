@@ -4,6 +4,12 @@
     <title>{{ scene.title }}</title>
 </head>
 <body>
+    <nav style="border-bottom: 2px solid #333; padding: 10px; margin-bottom: 20px;">
+        <a href="{% url 'castle_adventure:inventory' %}">[Inventory]</a> |
+        <a href="{% url 'castle_adventure:save' %}">[Save Game]</a> |
+        <a href="{% url 'castle_adventure:new_game' %}">[New Game]</a>
+    </nav>
+
     <h1>{{ scene.title }}</h1>
     <p>{{ scene.description }}</p>
 
@@ -15,8 +21,11 @@
     <ul>
     {% for choice in choices %}
         <li>
-            [{{ choice.choice_letter }}] {{ choice.choice_text }}
-            {% if choice.is_locked %}(Locked){% endif %}
+            {% if choice.is_locked %}
+                [{{ choice.choice_letter }}] {{ choice.choice_text }} (Locked - requires item)
+            {% else %}
+                <a href="{% url 'castle_adventure:choice' choice.id %}">[{{ choice.choice_letter }}] {{ choice.choice_text }}</a>
+            {% endif %}
         </li>
     {% endfor %}
     </ul>
@@ -25,7 +34,10 @@
     <h2>Items Here</h2>
     <ul>
     {% for item in items_here %}
-        <li>{{ item.name }}</li>
+        <li>
+            {{ item.icon }} <strong>{{ item.name }}</strong> - {{ item.description }}
+            <a href="{% url 'castle_adventure:pickup_item' item.item_id %}">[Pick up]</a>
+        </li>
     {% endfor %}
     </ul>
     {% endif %}

@@ -126,15 +126,8 @@ def pickup_item(request, item_id):
 
     game_state.add_item(item_id)
 
-    return JsonResponse({
-        'success': True,
-        'item': {
-            'id': item.item_id,
-            'name': item.name,
-            'description': item.description,
-            'icon': item.icon,
-        }
-    })
+    # Redirect back to current scene
+    return redirect('castle_adventure:scene', scene_id=game_state.current_scene.scene_id)
 
 
 def view_inventory(request):
@@ -154,17 +147,10 @@ def save_game(request):
     try:
         game_state = get_game_state(request)
         game_state.save()
-
-        return JsonResponse({
-            'success': True,
-            'message': 'Game saved successfully',
-            'last_saved': game_state.last_updated.isoformat(),
-        })
+        # Redirect back to current scene with success message
+        return redirect('castle_adventure:scene', scene_id=game_state.current_scene.scene_id)
     except Http404:
-        return JsonResponse({
-            'success': False,
-            'message': 'No active game found'
-        }, status=404)
+        return redirect('castle_adventure:landing')
 
 
 def load_game(request):

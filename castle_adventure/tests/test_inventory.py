@@ -45,12 +45,8 @@ class PickupItemViewTestCase(TestCase):
         )
 
         response = self.client.post(reverse('castle_adventure:pickup_item', args=['key']))
-        self.assertEqual(response.status_code, 200)
-
-        data = json.loads(response.content)
-        self.assertTrue(data['success'])
-        self.assertEqual(data['item']['id'], 'key')
-        self.assertEqual(data['item']['name'], 'Rusty Key')
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('castle_adventure:scene', args=[self.scene1.scene_id]))
 
         game_state.refresh_from_db()
         self.assertIn('key', game_state.inventory)
@@ -67,7 +63,7 @@ class PickupItemViewTestCase(TestCase):
         self.client.post(reverse('castle_adventure:pickup_item', args=['key']))
         response = self.client.post(reverse('castle_adventure:pickup_item', args=['key']))
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
         game_state.refresh_from_db()
 
         self.assertEqual(game_state.inventory.count('key'), 1)
