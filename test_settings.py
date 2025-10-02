@@ -45,4 +45,6 @@ TEMPLATES = [
     },
 ]
 
+ROOT_URLCONF = 'test_urls'
+
 USE_TZ = True

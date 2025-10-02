@@ -7,5 +7,11 @@ from . import views
 app_name = 'castle_adventure'
 
 urlpatterns = [
-    # URLs will be added as views are implemented in T-003
+    path('', views.landing_page, name='landing'),
+    path('start/', views.start_game, name='start'),
+    path('scene/<str:scene_id>/', views.display_scene, name='scene'),
+    path('choice/<int:choice_id>/', views.make_choice, name='choice'),
+    path('inventory/', views.view_inventory, name='inventory'),
+    path('save/', views.save_game, name='save'),
+    path('load/', views.load_game, name='load'),
 ]

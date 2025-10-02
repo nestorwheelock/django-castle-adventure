@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ scene.title }}</title>
+</head>
+<body>
+    <h1>{{ scene.title }}</h1>
+    <p>{{ scene.description }}</p>
+
+    {% if scene.ascii_art %}
+    <pre>{{ scene.ascii_art }}</pre>
+    {% endif %}
+
+    <h2>What do you do?</h2>
+    <ul>
+    {% for choice in choices %}
+        <li>
+            [{{ choice.choice_letter }}] {{ choice.choice_text }}
+            {% if choice.is_locked %}(Locked){% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+
+    {% if items_here %}
+    <h2>Items Here</h2>
+    <ul>
+    {% for item in items_here %}
+        <li>{{ item.name }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

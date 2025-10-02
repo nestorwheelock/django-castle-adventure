@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory</title>
+</head>
+<body>
+    <h1>Inventory</h1>
+    <ul>
+    {% for item in items %}
+        <li>{{ item.name }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
