@@ -72,6 +72,11 @@ def display_scene(request, scene_id):
     game_state = get_game_state(request)
     scene = get_object_or_404(Scene, scene_id=scene_id)
 
+    # Ensure requested scene matches current game state
+    # Redirect to actual current scene if they don't match
+    if scene != game_state.current_scene:
+        return redirect('castle_adventure:scene', scene_id=game_state.current_scene.scene_id)
+
     choices = scene.choices_from.all()
 
     for choice in choices:
