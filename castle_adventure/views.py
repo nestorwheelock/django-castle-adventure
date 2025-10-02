@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponseBadRequest, Http404
+from django.http import HttpResponseBadRequest, Http404, JsonResponse
 from .models import Scene, Choice, Item, GameState
 
 
@@ -94,6 +94,27 @@ def make_choice(request, choice_id):
     game_state.save()
 
     return redirect('castle_adventure:scene', scene_id=choice.to_scene.scene_id)
+
+
+def pickup_item(request, item_id):
+    """Pick up an item and add to inventory."""
+    game_state = get_game_state(request)
+    item = get_object_or_404(Item, item_id=item_id)
+
+    if item.found_in_scene != game_state.current_scene:
+        return HttpResponseBadRequest("Item not in this scene")
+
+    game_state.add_item(item_id)
+
+    return JsonResponse({
+        'success': True,
+        'item': {
+            'id': item.item_id,
+            'name': item.name,
+            'description': item.description,
+            'icon': item.icon,
+        }
+    })
 
 
 def view_inventory(request):
